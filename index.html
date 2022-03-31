@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>PostCSS Tooling</title>
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet"> -->
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+      <main>
+         <div id="bacContainer" class="bac_container">
+            <div class="wrapper">
+               <div class="bac_input_wrapper">
+                  <form class="bac_form" id="bac_form">
+                     <div class="input_wrapper">
+                        <input id="input_0" type="text" aria-labelledby="label_0" inputmode="numeric" name="bodyWeight" value="">
+                        <label id="label_0" for="input_0">Body weight in pounds</label>
+                     </div>
+                     <div class="input_wrapper">
+                        <input id="input_1" type="text" aria-labelledby="label_1" inputmode="numeric" name="numDrinks" value="">
+                        <label id="label_1" for="input_1">Number of drinks</label>
+                     </div>
+                     <div class="input_wrapper">
+                        <input id="input_2" type="text" aria-labelledby="label_2" inputmode="numeric" name="numHours" value="">
+                        <label id="label_2" for="input_2">Hours spent drinking</label>
+                     </div>
+                     <div id="form_error" class="form_error">Please fill out all the fields.</div>
+                     <button id="submit" class="submit_btn">Enter</button>
+                  </form>
+               </div>
+               <div class="bac_results_wrapper">
+                  <h2 class="resultHeader">Results</h2>
+                  <p id="resultDesc" class="resultDesc">Please fill out BAC calculator to generate results.</p>
+               </div>
+            </div>
+         </div>
+      </main>
+      <script src="./main.js"></script>
+   </body>
+</html>
