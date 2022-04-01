@@ -47,9 +47,9 @@ window.addEventListener('load', () => {
 
       var form_error = document.getElementById('form_error')
 
-      var w = document.getElementById('input_0').value
-      var c = document.getElementById('input_1').value
-      var h = document.getElementById('input_2').value
+      var w = document.getElementById('custom_bac_input_0').value
+      var c = document.getElementById('custom_bac_input_1').value
+      var h = document.getElementById('custom_bac_input_2').value
 
       if(w !== '' && c !== '' && h !== '') {
          var result = calculateBAC(c, w, h)
@@ -59,7 +59,7 @@ window.addEventListener('load', () => {
          var resultContainer = document.createElement('span')
          resultContainer.setAttribute('class', 'resultContainer')
          resultContainer.setAttribute('id', 'resultContainer')
-         resultContainer.innerHTML = `~${result}`
+         resultContainer.innerHTML = '~' + result
          resultDesc.appendChild(resultContainer)
 
          form_error.classList.remove('active')
@@ -91,8 +91,8 @@ window.addEventListener('load', () => {
       var w = document.createElement('div')
       w.classList.add('input_wrapper')
    
-      var input_id = 'input_' + id
-      var label_id = 'label_' + id
+      var input_id = 'custom_bac_input_' + id
+      var label_id = 'custom_bac_label_' + id
       console.log(input_id)
    
       //create input
