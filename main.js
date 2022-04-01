@@ -91,8 +91,9 @@ window.addEventListener('load', () => {
       var w = document.createElement('div')
       w.classList.add('input_wrapper')
    
-      var input_id = `input_${id}`
-      var label_id = `label_${id}`
+      var input_id = 'input_' + id
+      var label_id = 'label_' + id
+      console.log(input_id)
    
       //create input
       var i = document.createElement('input')
