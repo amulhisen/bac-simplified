@@ -1,10 +1,4 @@
 window.addEventListener('load', () => {
-   // var bac_form = document.getElementById('bac_form')
-
-   // if(bac_form) {
-   //    bac_form.addEventListener('submit', submitHandler)
-   // }
-   /*----------------------------------------------------*/
    var inputs_data = [
       {
          name: 'bodyWeight',
@@ -27,7 +21,6 @@ window.addEventListener('load', () => {
    console.log(bacInputWrapper)
    
    var bac_form = createDomElement('form', ['bac_form'], 'bac_form')
-   console.log(bac_form)
    bac_form.addEventListener('submit', submitHandler)
 
    inputs_data.forEach((input, index) => {
@@ -45,8 +38,6 @@ window.addEventListener('load', () => {
    function submitHandler(e) {
       e.preventDefault()
 
-      var form_error = document.getElementById('form_error')
-
       var w = document.getElementById('custom_bac_input_0').value
       var c = document.getElementById('custom_bac_input_1').value
       var h = document.getElementById('custom_bac_input_2').value
@@ -61,11 +52,6 @@ window.addEventListener('load', () => {
          resultContainer.setAttribute('id', 'resultContainer')
          resultContainer.innerHTML = '~' + result
          resultDesc.appendChild(resultContainer)
-
-         form_error.classList.remove('active')
-      }
-      else {
-         form_error.classList.add('active')
       }
    }
 
@@ -93,8 +79,7 @@ window.addEventListener('load', () => {
    
       var input_id = 'custom_bac_input_' + id
       var label_id = 'custom_bac_label_' + id
-      console.log(input_id)
-   
+
       //create input
       var i = document.createElement('input')
       i.setAttribute('id', input_id)
