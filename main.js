@@ -23,9 +23,23 @@ window.addEventListener('load', () => {
       }
    ]
 
+   function createDomElement(type, classes, id) {
+      var e = document.createElement(type)
+   
+      if(id) {
+         e.setAttribute('id', id)
+      }
+      if(classes) {
+         classes.forEach(c => e.classList.add(c))
+      }
+      return e
+   }
+
    var bacInputWrapper = document.getElementById('bacInputWrapper')
+   console.log(bacInputWrapper)
    
    var bac_form = createDomElement('form', ['bac_form'], 'bac_form')
+   console.log(bac_form)
    bac_form.addEventListener('submit', submitHandler)
 
    inputs_data.forEach((input, index) => {
@@ -70,18 +84,6 @@ window.addEventListener('load', () => {
    /*----------------------------------------------------*/
    function calculateBAC(c, w, h) {
       return ([(c / 2) * (9 / w)] - [0.017 * h]).toFixed(2)
-   }
-
-   function createDomElement(type, classes, id) {
-      var e = document.createElement(type)
-   
-      if(id) {
-         e.setAttribute('id', id)
-      }
-      if(classes) {
-         classes.forEach(c => e.classList.add(c))
-      }
-      return e
    }
 
    function createInputDom(name, label, id) {
